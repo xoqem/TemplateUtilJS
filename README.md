@@ -18,7 +18,7 @@ jQuerey is required for using the loadTemplate method, which allows the user to 
 Docs
 ====
 
----------------
+
 tmpl(str, data)
 ---------------
 
@@ -29,7 +29,6 @@ str - This can be either the template name or the contents of a template.  If it
 data - This is the object which will define properties that are matched by properties in the template.  The values from this data object will be interjected into the template.
 
 
-------------------------------------
 addTemplate(templateName, contentes)
 ------------------------------------
 
@@ -39,7 +38,6 @@ templateName - The dentifier you want to use for the template you are adding.
 contents - The contents (as a string) of the template
 
 
------------------------------------------
 loadTemplate(templateName, url, callback)
 -----------------------------------------
 

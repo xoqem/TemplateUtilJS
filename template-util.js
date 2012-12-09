@@ -46,48 +46,6 @@ var TemplateUtil = (function() {
 
 
   ///////////////////////////////
-  // Script Loading
-  ///////////////////////////////
-
-  function loadScript(url, callback) {
-    $.ajax({
-      type: 'GET',
-      url: url, 
-      success: function() {
-          if (typeof callback !== 'undefined') {
-            callback();
-          }
-        },
-      dataType: 'script',
-      cache: true
-    });
-  }
-
-  function loadScripts(scriptUrls, callback) {
-    var itemsLoading = 0;
-    $.each(scriptUrls, function(index, scriptUrl) {
-      itemsLoading++;
-      loadScript(scriptUrl, function() {
-        itemsLoading--;
-        if (itemsLoading == 0 && typeof callback !== 'undefined') {
-          callback();
-        }
-      });
-    });
-  }
-
-
-  ///////////////////////////////
-  // Public Methods
-  ///////////////////////////////
-
-  function getQueryStringByName(name, defaultValue) {
-    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-    return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : defaultValue;
-  }
-
-
-  ///////////////////////////////
   // Public Methods
   ///////////////////////////////
 
@@ -95,8 +53,5 @@ var TemplateUtil = (function() {
     tmpl: tmpl,
     addTemplate: addTemplate,
     loadTemplate: loadTemplate,
-    loadScript: loadScript,
-    loadScripts: loadScripts,
-    getQueryStringByName: getQueryStringByName
   };
 }());

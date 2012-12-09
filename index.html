@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="template-util.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // first example
+        var template1 = "Hello <%=name%>!"
+        var data1 = {
+          name: "John"
+        }
+        var result1 = TemplateUtil.tmpl(template1, data1);
+        $('body').append('<h3>Example 1</h3>');
+        $('body').append(result1);
+
+
+        // second example
+        TemplateUtil.addTemplate("day_template", "Today is a <%=day_type%> day, I hope you are <%=mood%>!");
+        var data2 = {
+          day_type: "good",
+          mood: "happy"
+        }
+        var result2 = TemplateUtil.tmpl("day_template", data2);
+        $('body').append('<h3>Example 2</h3>');
+        $('body').append(result2);
+
+
+        // third example
+        TemplateUtil.loadTemplate("color_template", "favorite_colors.tmpl", function() {
+          var data3 = {
+            color1: "blue",
+            color2: "green"
+          }
+          var result3 = TemplateUtil.tmpl("color_template", data3);
+          $('body').append('<h3>Example 3</h3>');
+          $('body').append(result3);
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+  </body>
+
+</html>

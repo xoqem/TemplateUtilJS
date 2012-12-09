@@ -1,6 +1,6 @@
 var TemplateUtil = (function() {
 
-  // Dependencies: jQuerey is required for using the methods that load external templates
+  // Dependencies: jQuerey is required for using the loadTemplate method
 
   var tmpl_cache = {};
   var templates = {};

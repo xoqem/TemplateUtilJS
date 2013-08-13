@@ -2,7 +2,7 @@
 TemplateUtilJS
 ==============
 
-This is a util for simple javascript templating.  The code for the tmpl function was adapted from John Resig's micro templating example (http://ejohn.org/blog/javascript-micro-templating/).  A couple of helper methods were adding for adding templates from either a string or external url.
+This is a util for simple javascript templating.  If you are looking for your solution, I highly suggest trying a more tried and true solution, like Underscore's built in template method or Handlebars.  The code for the tmpl function was adapted from John Resig's micro templating example (http://ejohn.org/blog/javascript-micro-templating/).  A couple of helper methods were adding for adding templates from either a string or external url.
 
 The only file you need to use this is the template-util.js file.  To see an example run index.html and take a peek at the source code.
 
